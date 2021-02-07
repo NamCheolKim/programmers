@@ -3,17 +3,16 @@ s = "Zbcdefg"
 
 
 def solution(s):
-    answer = []
-    change = ""
+    answer = ""
+    str_arr = []
 
     for i in range(len(s)):
-        answer.append(s[i])
+        str_arr.append(s[i])
 
-    answer = sorted(answer, reverse=True)
+    str_arr = sorted(str_arr, reverse=True)
+    answer = "".join(str_arr)
 
-    change = "".join(answer)
-
-    return change
+    return answer
 
 
 result = solution(s)

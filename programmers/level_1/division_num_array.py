@@ -3,17 +3,7 @@ s = [2, 36, 1, 3]
 
 
 def solution(arr, divisor):
-    answer = []
-    for i in range(len(arr)):
-        if arr[i] % divisor == 0:
-            answer.append(arr[i])
-
-    if len(answer) == 0:
-        answer.append(-1)
-    else:
-        answer.sort()
-
-    return answer
+    return sorted([i for i in arr if i % divisor == 0]) or [-1]
 
 
 result = solution(s, 1)
